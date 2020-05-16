@@ -1,4 +1,17 @@
-# DA-RNN
+## Yuri Updates
+
+I ran the trainer and saved my model [here](https://github.com/ScrapeWithYuri/da-rnn/blob/master/darnn-improved/checkpoints/best.pkl).
+
+The biggest issue with these types of models is that they generally lag the price of the target by one time step. By doing so, the RMSE is really low, but the result is not informative whether the predicted price will go up or down relative to the target. For instance, I tested my model, saved the results, and compared whether:
+
+ 1) The predicted value for tomorrow will be greater than the predicted value of today vs. actual
+ 2) The predicted value for tomorrow will be greater than the current value of today vs. actual
+ 
+ The results are not promising, as 1) is 50.8% accuracy and 2) is 48.3% accuracy
+ 
+ My results are saved [here](https://github.com/ScrapeWithYuri/da-rnn/blob/master/darnn-improved/best.xlsx).
+
+## DA-RNN
 
 This repository holds the reproduction codes for [A Dual-Stage Attention-Based Recurrent Neural Network for Time Series Prediction-IJCAI2017](https://arxiv.org/pdf/1704.02971.pdf). 
 
